@@ -79,7 +79,7 @@ jobs:
             mingw-w64-x86_64-openssl
             mingw-w64-x86_64-intel-tbb
       - name: Download version file
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: version.txt
 
@@ -90,7 +90,7 @@ jobs:
           echo "::set-output name=cmake_project_version::${CMAKE_PROJECT_VERSION}"
 
       - name: Download tarball artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: torrenttools-${{ steps.cmake_version.outputs.cmake_project_version }}.tar.gz
 
@@ -136,7 +136,7 @@ jobs:
     needs: [ package-tarball ]
     steps:
       - name: Download version file
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: version.txt
 
@@ -147,7 +147,7 @@ jobs:
           echo "::set-output name=cmake_project_version::${CMAKE_PROJECT_VERSION}"
 
       - name: Download tarball artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: torrenttools-${{ steps.cmake_version.outputs.cmake_project_version }}.tar.gz
 
@@ -205,7 +205,7 @@ jobs:
     needs: [ package-tarball ]
     steps:
       - name: Download version file
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: version.txt
 
@@ -216,7 +216,7 @@ jobs:
           echo "::set-output name=cmake_project_version::${CMAKE_PROJECT_VERSION}"
 
       - name: Download tarball artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: torrenttools-${{ steps.cmake_version.outputs.cmake_project_version }}.tar.gz
 

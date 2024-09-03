@@ -37,7 +37,7 @@ jobs:
       - name: Install runtime dependencies
         run: sudo apt-get install -y libstdc++-10-dev g++-10 gcc-10 libssl-dev libtbb-dev libre2-dev libyaml-cpp-dev nlohmann-json3-dev
       - name: Download build artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: torrenttools-binaries
           path: cmake-build-debug
